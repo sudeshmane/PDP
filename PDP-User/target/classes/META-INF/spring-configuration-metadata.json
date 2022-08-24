@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "",
+      "type": "com.example.user.controller.PConfiguration",
+      "sourceType": "com.example.user.controller.PConfiguration"
+    }
+  ],
+  "properties": [
+    {
+      "name": "name",
+      "type": "java.lang.String",
+      "sourceType": "com.example.user.controller.PConfiguration"
+    }
+  ],
+  "hints": []
+}

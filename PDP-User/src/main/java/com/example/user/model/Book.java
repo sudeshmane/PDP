@@ -56,4 +56,8 @@ public class Book
 	String publication;
 	
 	String publishDate;
+	
+	public Book() {
+		// TODO Auto-generated constructor stub
+	}
 }

@@ -1,0 +1,9 @@
+com\example\user\UserApplication.class
+com\example\user\service\UserService.class
+com\example\user\repository\UsersRepository.class
+META-INF\spring-configuration-metadata.json
+com\example\user\model\User.class
+com\example\user\controller\UserRestController.class
+com\example\user\entity\UsersEntity.class
+com\example\user\model\Book.class
+com\example\user\controller\PConfiguration.class

@@ -43,4 +43,8 @@ public class UsersEntity
 	String name;
 	@Column
 	String address;
+	
+	public UsersEntity() {
+		// TODO Auto-generated constructor stub
+	}
 }
