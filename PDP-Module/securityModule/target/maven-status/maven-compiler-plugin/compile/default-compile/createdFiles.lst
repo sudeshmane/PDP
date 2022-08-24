@@ -1,0 +1,7 @@
+com\example\library\MyUserDetails.class
+com\example\library\UserDetailsServiceImpl.class
+com\example\library\User.class
+com\example\library\Role.class
+com\example\library\UserRepository.class
+com\example\library\WebSecurityConfig.class
+com\example\library\OAuth2Config.class
