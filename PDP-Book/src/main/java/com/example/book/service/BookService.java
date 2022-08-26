@@ -20,7 +20,7 @@ public class BookService {
 	}
 
 	public Book getBook(int id){
-		return bookRepository.findById(id).get();
+		return bookRepository.findById(id).orElseGet(()-> new Book());
 	}
 
 	public Book addBook(Book book){
