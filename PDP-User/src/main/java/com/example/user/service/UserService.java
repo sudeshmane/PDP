@@ -20,7 +20,7 @@ public class UserService {
 	}
 
 	public UsersEntity getUser(int id){
-		return userRepository.findById(id).get();
+		return userRepository.findById(id).orElseGet(()-> new UsersEntity());
 	}
 
 	public UsersEntity addUser(UsersEntity user){
