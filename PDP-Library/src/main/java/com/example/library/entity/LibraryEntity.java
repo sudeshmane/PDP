@@ -23,24 +23,32 @@ public class LibraryEntity
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
 	
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
 	 
 	
 	
+	
+	public int getUserId() {
+		return userid;
+	}
+	public void setUserId(int userId) {
+		this.userid = userId;
+	}
+	public int getBookId() {
+		return bookid;
+	}
+	public void setBookId(int bookId) {
+		this.bookid = bookId;
+	}
+
+
+
 	@Column
-	String name;
+	int userid;
 	@Column
-	String address;
+	int bookid;
+	
+	public LibraryEntity() {
+		
+	}
 }

@@ -1,12 +1,17 @@
 package com.example.library.model;
 
-public class User 
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+public class User implements Serializable
 {
 
-	/**
-	 * 
-	 */
-	int id;
+	
+	private int id;
+	
 	public int getId() {
 		return id;
 	}
@@ -19,28 +24,19 @@ public class User
 	public void setName(String name) {
 		this.name = name;
 	}
-	/*
-	 public String getAuthor() {
-	 	return author;
+	
+	public String getAddress() {
+		return address;
 	}
-	public void setAuthor(String author) {
-		this.author = author;
+	public void setAddress(String address) {
+		this.address = address;
 	}
-	public String getPublication() {
-		return publication;
-	}
-	public void setPublication(String publication) {
-		this.publication = publication;
-	}
-	public LocalDate getPublishDate() {
-		return publishDate;
-	}
-	public void setPublishDate(LocalDate publishDate) {
-		this.publishDate = publishDate;
-	}
-	*/
+	 
+	
+	
 	String name;
-	//String author;
-	//String publication;
-	//LocalDate publishDate;
+	String address;
+	
+	public User() {
+	}
 }

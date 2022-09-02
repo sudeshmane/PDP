@@ -16,15 +16,6 @@ import org.springframework.web.client.RestTemplate;
 public class LibraryApplication {
 	public static void main(String [] args) {
 		SpringApplication.run(LibraryApplication.class, args);
-		
-		/* 
-		  org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder encoder = new org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder();
-	
-		  String encoded = encoder.encode("pqr");
-		    System.out.println("pqr "+encoded);
-		    encoded = encoder.encode("password2");
-		    System.out.println(encoded);
-		 */
 	}
 	
 @Bean
