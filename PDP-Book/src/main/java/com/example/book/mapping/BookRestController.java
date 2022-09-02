@@ -13,9 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
 import com.example.book.model.Book;
 import com.example.book.service.BookService;
@@ -28,6 +26,7 @@ public class BookRestController {
 	
 	Logger logger = (Logger) LoggerFactory.getLogger(BookRestController.class);
 	
+	
 	@GetMapping("/books")
 	public ResponseEntity<Map<Integer, Book>> getBookList(){
 		logger.info("in Book getBookList");
@@ -36,11 +35,23 @@ public class BookRestController {
 		return new ResponseEntity(bookService.getList(), HttpStatus.OK );
 	}
 	
+	
+	//@HystrixCommand(fallbackMethod = "getBookHystrix")
 	@GetMapping("/books/{book_id}")
 	public Book getBook(@PathVariable ("book_id") int bookId){
 		logger.info("in Book getBook");
 		Book book = bookService.getBook(bookId);
 		book.setId(bookId);
+		return book;
+	}
+	
+	public Book getBookHystrix(int id){
+		logger.info("in Book getBook Hystrix");
+		Book book = new Book();
+		book.setId(0);
+		book.setName("Hystrix Book");
+		book.setAuthor("Hystrix Author");
+		book.setPublication("Hystrix Publication");
 		return book;
 	}
 	

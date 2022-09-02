@@ -1,0 +1,5 @@
+com\example\book\service\BookService.class
+com\example\book\mapping\BookRestController.class
+com\example\book\model\Book.class
+com\example\book\repository\BookRepository.class
+com\example\book\BookApplication.class
